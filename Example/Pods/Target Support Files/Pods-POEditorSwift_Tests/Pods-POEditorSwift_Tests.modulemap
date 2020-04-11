@@ -1,0 +1,6 @@
+framework module Pods_POEditorSwift_Tests {
+  umbrella header "Pods-POEditorSwift_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

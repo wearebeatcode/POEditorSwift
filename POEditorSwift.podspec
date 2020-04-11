@@ -9,34 +9,22 @@
 Pod::Spec.new do |s|
   s.name             = 'POEditorSwift'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of POEditorSwift.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.summary          = 'Localize strings from POEditor without Localizable.strings file'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+BETA VERSION
+This pod downloads localizations from POEditor APIs and make them available over the air instead of using static Localizable.string files
                        DESC
 
-  s.homepage         = 'https://github.com/Giuseppe Travasoni/POEditorSwift'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/neobeppe/POEditorSwift'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Giuseppe Travasoni' => 'giuseppe.travasoni@gmail.com' }
-  s.source           = { :git => 'https://github.com/Giuseppe Travasoni/POEditorSwift.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/neobeppe/POEditorSwift.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/neobeppe'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '11.0'
+  s.swift_version = '5.0'
 
   s.source_files = 'POEditorSwift/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'POEditorSwift' => ['POEditorSwift/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

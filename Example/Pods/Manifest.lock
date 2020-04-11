@@ -1,0 +1,16 @@
+PODS:
+  - POEditorSwift (0.1.0)
+
+DEPENDENCIES:
+  - POEditorSwift (from `../`)
+
+EXTERNAL SOURCES:
+  POEditorSwift:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  POEditorSwift: cfddf79969f027c17a9d28e518278df33269b253
+
+PODFILE CHECKSUM: dae540cc47d22cdf919bf28d423ca2dfb69a41b6
+
+COCOAPODS: 1.9.1

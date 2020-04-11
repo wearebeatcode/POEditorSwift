@@ -1,0 +1,6 @@
+framework module POEditorSwift {
+  umbrella header "POEditorSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
