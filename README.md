@@ -86,8 +86,10 @@ If the requested translation is not available it will fallback on NSLocalizedStr
 ## TODOs
 
 Before declaring this library in beta version there's still some work to do:
-- [] Unit test the whole library
-- [] I'm sure that this list is longer but i don't know how to fill it
+- [ ] Unit test the whole library
+- [ ] Add Travis CI
+- [ ] Add swiftlint
+- [ ] I'm sure that this list is longer but i don't know how to fill it
 
 ## Author
 
