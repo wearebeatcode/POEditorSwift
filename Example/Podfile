@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'POEditorSwift_Example' do
+  pod 'POEditorSwift', :path => '../'
+
+  target 'POEditorSwift_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
