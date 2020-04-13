@@ -18,7 +18,7 @@ public extension String {
     
     func localize(in languageCode: String) -> String {
         guard let translationService = POEditor.translationService,
-            let language = translationService.languages.first(where: { $0.code == languageCode }),
+            let language = translationService.languages.first(where: { $0.code.lowercased() == languageCode.lowercased() }),
             let translation = language.translations[self] else {
                 return NSLocalizedString(self, comment: "")
         }
