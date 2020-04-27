@@ -11,14 +11,7 @@ extension JSONDecoder {
     
     static var decoder: JSONDecoder {
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .formatted(dateFormatter)
+        decoder.dateDecodingStrategy = .formatted(DateFormatter.formatter)
         return decoder
-    }
-    
-    private static var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        formatter.calendar = Calendar(identifier: .iso8601)
-        return formatter
     }
 }

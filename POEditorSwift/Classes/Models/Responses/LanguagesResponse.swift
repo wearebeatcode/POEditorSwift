@@ -21,4 +21,17 @@ internal struct TranslationLanguage: Codable {
     let name, code: String
     let translations, percentage: Int
     let updated: Date?
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        self.name = try values.decode(String.self, forKey: .name)
+        self.code = try values.decode(String.self, forKey: .code)
+        self.translations = try values.decode(Int.self, forKey: .translations)
+        self.percentage = try values.decode(Int.self, forKey: .percentage)
+        if let updatedString = try? values.decodeIfPresent(String.self, forKey: .updated), !updatedString.isEmpty {
+            self.updated = DateFormatter.formatter.date(from: updatedString)
+        } else {
+            self.updated = nil
+        }
+    }
 }
