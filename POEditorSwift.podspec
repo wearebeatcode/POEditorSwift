@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'POEditorSwift'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'Localize strings from POEditor without Localizable.strings file'
 
   s.description      = <<-DESC
