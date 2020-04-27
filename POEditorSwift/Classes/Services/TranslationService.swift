@@ -42,10 +42,13 @@ class TranslationService {
     
     private func updateLanguages(from translationLanguages: [TranslationLanguage], completion: @escaping ((Error?) -> Void)) {
         let toUpdate = translationLanguages.filter { translation -> Bool in
+            guard let translationUpdated = translation.updated else {
+                return false
+            }
             guard let localLanguage = languages.first(where: { $0.code == translation.code }) else {
                 return true
             }
-            return translation.updated > localLanguage.lastUpdate
+            return translationUpdated > localLanguage.lastUpdate
         }
         
         var foundUrls: [(TranslationLanguage, String)] = []
@@ -77,7 +80,7 @@ class TranslationService {
                 case .failure(_):
                     dispatch.leave()
                 case .success(let translations):
-                    let newLanguage = Language(translations: translations, lastUpdate: translationLanguage.updated, code: translationLanguage.code)
+                    let newLanguage = Language(translations: translations, lastUpdate: translationLanguage.updated ?? Date(), code: translationLanguage.code)
                     self.languages.removeAll(where: { $0.code == newLanguage.code })
                     self.languages.append(newLanguage)
                     dispatch.leave()

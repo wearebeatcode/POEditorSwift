@@ -20,5 +20,5 @@ internal struct LanguageResult: Codable {
 internal struct TranslationLanguage: Codable {
     let name, code: String
     let translations, percentage: Int
-    let updated: Date
+    let updated: Date?
 }
